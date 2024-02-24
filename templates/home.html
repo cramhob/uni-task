@@ -15,11 +15,22 @@
   </style>
 </head>
 <body>
+   {% include 'nav.html' %}
+  <img class="img-fluid" id="banner" src="https://images.unsplash.com/photo-1621106162740-aef58d51efe4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     <div class = "container">
-      <h1 class="text-center mt-2 mb-4"> SS Careers </h1>
-      <img class="img-fluid" id="banner" src="https://images.unsplash.com/photo-1621106162740-aef58d51efe4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-      <h2 class="text-center"> О нас </h2>
-      <p class="lead">SS Careers - это ведущая компания, специализирующаяся на публикации вакансий в сфере информационных технологий (IT). Наша миссия - соединить талантливых специалистов с инновационными компаниями по всему миру. Мы предлагаем широкий спектр вакансий в IT-секторе, включая разработку программного обеспечения, сетевую безопасность, аналитику данных, веб-разработку и многое другое. Наша цель - обеспечить эффективное взаимодействие между работодателями и кандидатами, чтобы обеспечить успешное развитие как компаний, так и профессионалов в IT-индустрии. </p>
+      <h1 class="text-center mt-2 mb-4"> SS Careers </h1> 
+      
+      <div class="row" style="margin-bottom: 32px;">
+        <div class="col-md-6">
+          <p class="lead">
+            SS Careers - это ведущая компания, специализирующаяся на публикации вакансий в сфере информационных технологий (IT). Наша миссия - соединить талантливых специалистов с инновационными компаниями по всему миру. Мы предлагаем широкий спектр вакансий в IT-секторе, включая разработку программного обеспечения, сетевую безопасность, аналитику данных, веб-разработку и многое другое. Наша цель - обеспечить эффективное взаимодействие между работодателями и кандидатами, чтобы обеспечить успешное развитие как компаний, так и профессионалов в IT-индустрии. 
+          </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="height: 320px; border-radius: 4px;">
+        </div>
+      </div>
+
       <h2 class="text-center mt-2 mb-4"> Свободные позиции</h2>
       <div>
         {% for job in jobs %}
@@ -27,9 +38,9 @@
         {% endfor %}
       </div>
       <div class="text-center">
-      <button class="btn btn-primary btn-lg"> Связаться с нами</button>
-        <p class= "mt-4">Copyright 2024, SS Careers</p>
+      <a class="btn btn-primary btn-lg" href="mailto:hello@scareers.ai?subject=Questions&body=My%20name%20%3Cyour%20name%20here%3E%0D%0AMy%20questions%20%3Center%20questions%20here%3E">Contact Us</a>
       </div>
     </div>
 </body>
+  {% include 'footer.html' %}
 </html>
